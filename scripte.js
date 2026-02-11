@@ -139,5 +139,51 @@ function afficherTasks() {
 afficherTasks();
 const promo = document.getElementById("promodor");
 function promodoor() {
-  promo.innerHTML = ``;
+  promo.innerHTML = `
+  <div class="bg-white w-80 h-[500px] rounded-2xl shadow-xl flex flex-col items-center p-6">
+
+    <!-- Select Task Button -->
+    <button class="bg-indigo-500 text-white px-6 py-2 rounded-full text-sm font-medium mb-6">
+      select task
+    </button>
+
+    <!-- Timer Circle -->
+    <div class="relative w-48 h-48 flex items-center justify-center mb-6">
+      
+      <!-- Outer Orange Circle -->
+      <div class="absolute inset-0 rounded-full border-[12px] border-orange-500"></div>
+
+      <!-- Inner Circle -->
+      <div class="w-40 h-40 bg-gray-100 rounded-full flex flex-col items-center justify-center shadow-inner">
+        <span class="text-3xl font-bold text-gray-700">25:00</span>
+        <span class="text-xs text-gray-500 mt-1">1 of 4 sessions</span>
+      </div>
+
+    </div>
+
+    <!-- Text -->
+    <p class="text-gray-600 text-sm mb-8">Stay Focus For 25min</p>
+
+    <!-- Controls -->
+    <div class="flex items-center gap-8 text-gray-700">
+
+      <!-- Reset -->
+      <button class="flex flex-col items-center">
+      <img src="images/image 12.png" alt="">
+      </button>
+
+      <!-- Play -->
+      <button class=" text-white w-12 h-12 rounded-full flex items-center justify-center">
+        <img src="images/image 13.png" alt="">
+      </button>
+
+      <!-- Stop -->
+      <button class="  w-10 h-10 rounded-full flex items-center justify-center">
+        <img src="images/image 14.png" alt="">
+      </button>
+
+    </div>
+
+  </div>`;
 }
+promodoor()
