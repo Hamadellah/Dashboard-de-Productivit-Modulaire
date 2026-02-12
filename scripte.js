@@ -136,7 +136,7 @@ function afficherTasks() {
   });
 }
 
-afficherTasks();
+
 const promo = document.getElementById("promodor");
 function promodoor() {
   promo.innerHTML = `
@@ -186,4 +186,3 @@ function promodoor() {
 
   </div>`;
 }
-promodoor()
