@@ -70,7 +70,7 @@ export function renderModal() {
 
           <button type="submit" class="px-4 py-2 bg-green-500 text-white rounded">
             Ajouter
-          </button>e 
+          </button>
         </form>
       </div>
     </div>
