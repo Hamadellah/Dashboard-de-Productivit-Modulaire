@@ -1,6 +1,6 @@
 
 
-import { getTasks, addTask , } from "./todo.js";
+import { getTasks, addTask, deleteTask } from "./todo.js";
 
 export function renderTasks() {
   const container = document.querySelector(".tasks");
@@ -16,15 +16,28 @@ export function renderTasks() {
             <p class="text-sm text-gray-500">${task.category}</p>
           </div>
         </div>
-        <div class="text-gray-600 font-medium flex flex-col">
-          <button id="supprimer" class="supprimer" onclick="supprimer(${task.id})" >supprimer</button>
-          • ${task.time} min
-        
-          
+        <div class="flex items-center gap-4">
+          <span class="text-gray-600 font-medium">
+            • ${task.time} min
+          </span>
+
+          <button 
+            class="deleteBtn text-red-500 hover:text-red-700"
+            data-id="${task.id}"
+          >
+            ✖
+          </button>
         </div>
       </div>
     `;
   });
+    document.querySelectorAll(".deleteBtn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const id = Number(btn.dataset.id);
+        deleteTask(id);
+        renderTasks();
+      });
+    });
 }
 
 export function renderModal() {
@@ -97,8 +110,4 @@ export function renderModal() {
     taskModal.classList.add("hidden");
     renderTasks();
   });
-}
-export function supprimer(id) {
-  tasks= tasks.filter((el) => el.id !== id)
-  getTasks(tasks)
 }

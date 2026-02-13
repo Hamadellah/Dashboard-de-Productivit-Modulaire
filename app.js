@@ -1,6 +1,6 @@
 
 
-import { renderTasks, renderModal,  } from "./ui.js";
+import { renderTasks, renderModal, } from "./ui.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   renderModal();
