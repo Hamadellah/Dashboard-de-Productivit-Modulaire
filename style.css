@@ -95,3 +95,11 @@ gap: 20%;
   border: none;
   font-size: 20px;
 }
+.supprimer{
+  width: 80px;
+  height: 25px;
+  border-radius: 22px;
+  background-color: blueviolet;
+  color: white;
+
+}
