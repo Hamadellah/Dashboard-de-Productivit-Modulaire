@@ -13,5 +13,5 @@ export function addTask(task) {
   tasks.push(task);
 }
 export function deleteTask(id) {
-  tasks = tasks.filter((task) => task.id !== id);
+  tasks = tasks.filter((task) => task.id !== id)
 }
