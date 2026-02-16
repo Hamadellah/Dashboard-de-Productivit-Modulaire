@@ -1,6 +1,6 @@
 // app.js
 
-import { renderTasks, renderModal } from "./ui.js";
+import { renderTasks, renderModal } from "./ui.js"
 import { renderTimer } from "./timer.js";
 
 document.addEventListener("DOMContentLoaded", () => {
