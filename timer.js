@@ -59,7 +59,7 @@ function setupTimerEvents() {
         display.textContent = formatTime(timeLeft);
       } else {
         clearInterval(interval);
-        interval = null;
+        interval = null
         alert("Session Finished ✅");
       }
     }, 1000);
